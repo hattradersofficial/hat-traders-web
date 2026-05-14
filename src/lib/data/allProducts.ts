@@ -24,7 +24,7 @@ export const getAllProducts = (): SearchableProduct[] => {
   bluebirdProducts.forEach((p) => {
     all.push({
       ...p,
-      category: p.category || "bluebird-arts",
+      category: (p as any).category || "bluebird-arts",
       href: `/products/bluebird-arts/${p.slug}`,
       brand: "Bluebird Arts",
     });
@@ -34,7 +34,7 @@ export const getAllProducts = (): SearchableProduct[] => {
   duluxProducts.forEach((p) => {
     all.push({
       ...p,
-      category: p.category || "decorative-paints",
+      category: (p as any).category || "decorative-paints",
       href: `/products/decorative-paints/ici-dulux-paints/${p.slug}`,
       brand: "ICI Dulux",
     });
@@ -44,7 +44,7 @@ export const getAllProducts = (): SearchableProduct[] => {
   gobisProducts.forEach((p) => {
     all.push({
       ...p,
-      category: p.category || "decorative-paints",
+      category: (p as any).category || "decorative-paints",
       href: `/products/decorative-paints/gobis-paints/${p.slug}`,
       brand: "Gobis Paints",
     });
@@ -54,7 +54,7 @@ export const getAllProducts = (): SearchableProduct[] => {
   sparcoProducts.forEach((p) => {
     all.push({
       ...p,
-      category: p.category || "decorative-paints",
+      category: (p as any).category || "decorative-paints",
       href: `/products/decorative-paints/sparco-paints/${p.slug}`,
       brand: "Sparco Paints",
     });
@@ -64,7 +64,7 @@ export const getAllProducts = (): SearchableProduct[] => {
   nipponProducts.forEach((p) => {
     all.push({
       ...p,
-      category: p.category || "decorative-paints",
+      category: (p as any).category || "decorative-paints",
       href: `/products/decorative-paints/nippon-paints/${p.slug}`,
       brand: "Nippon Paints",
     });
@@ -96,7 +96,7 @@ export const getAllProducts = (): SearchableProduct[] => {
   sprayPaints.forEach((p) => {
     all.push({
       ...p,
-      category: p.category || "spray-paints",
+      category: (p as any).category || "spray-paints",
       href: `/products/decorative-paints/spray-paints/${p.slug}`,
       brand: "Spray Paints",
     });
@@ -106,7 +106,8 @@ export const getAllProducts = (): SearchableProduct[] => {
   accessoryProducts.forEach((p) => {
     all.push({
       ...p,
-      href: `/products/paint-accessories/${p.category}/${p.slug}`, // Note: this might need adjustment based on how accessories are routed
+      category: (p as any).category || "paint-accessories",
+      href: `/products/paint-accessories/${(p as any).category}/${p.slug}`,
       brand: "Paint Accessories",
     });
   });
@@ -115,7 +116,8 @@ export const getAllProducts = (): SearchableProduct[] => {
   hardwareProducts.forEach((p) => {
     all.push({
       ...p,
-      href: `/products/hardware-tools/${p.category}/${p.slug}`,
+      category: (p as any).category || "hardware-tools",
+      href: `/products/hardware-tools/${(p as any).category}/${p.slug}`,
       brand: "Hardware & Tools",
     });
   });
