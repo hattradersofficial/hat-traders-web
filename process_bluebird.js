@@ -16,14 +16,49 @@ raw.forEach(p => {
   let desc = p.body_html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
   let shortDesc = desc.substring(0, 150) + (desc.length > 150 ? '...' : '');
   
-  let category = p.product_type || 'Art Supplies';
-  if (category === '') {
-    if (p.title.toLowerCase().includes('canvas')) category = 'Canvas';
-    else if (p.title.toLowerCase().includes('brush')) category = 'Brushes';
-    else if (p.title.toLowerCase().includes('acrylic')) category = 'Acrylic Paints';
-    else if (p.title.toLowerCase().includes('fabric')) category = 'Fabric Paints';
-    else if (p.title.toLowerCase().includes('chalk')) category = 'Chalk Paints';
-    else category = 'General Art Supplies';
+  let category = p.product_type;
+  if (!category) {
+    const title = p.title.toLowerCase();
+    if (title.includes('canvas')) category = 'Canvas';
+    else if (title.includes('brush')) category = 'Brushes';
+    else if (title.includes('acrylic')) category = 'Acrylic Paints';
+    else if (title.includes('fabric')) category = 'Fabric Paints';
+    else if (title.includes('chalk')) category = 'Chalk Paints';
+    else if (title.includes('pastel')) category = 'Pastels';
+    else if (title.includes('medium') || title.includes('varnish') || title.includes('gesso')) category = 'Mediums & Varnishes';
+    else if (title.includes('poster')) category = 'Poster Paints';
+    else if (title.includes('bundle')) category = 'Bundles';
+    else category = 'Art Supplies';
+  }
+
+  // Extract features from body_html if possible
+  let features = [];
+  const listMatches = p.body_html.match(/<li>(.*?)<\/li>/g);
+  if (listMatches) {
+    features = listMatches
+      .map(m => m.replace(/<[^>]+>/g, '').trim())
+      .filter(f => f.length > 5 && f.length < 100)
+      .slice(0, 6);
+  }
+  
+  if (features.length < 3) {
+    // Try to find bold items or colon separated items
+    const strongMatches = p.body_html.match(/<strong>(.*?)<\/strong>.*?:/g);
+    if (strongMatches) {
+      features = strongMatches
+        .map(m => m.replace(/<[^>]+>/g, '').replace(':', '').trim())
+        .filter(f => f.length > 3 && f.length < 40)
+        .slice(0, 6);
+    }
+  }
+
+  if (features.length < 3) {
+    features = [
+      "Premium quality",
+      "Authentic Bluebird Arts product",
+      "Highly durable",
+      "Professional grade"
+    ];
   }
 
   products.push({
@@ -33,12 +68,7 @@ raw.forEach(p => {
     shortDesc: shortDesc || `Premium ${category} by Bluebird Arts`,
     longDesc: desc || `High quality ${category} manufactured by Bluebird Arts.`,
     category: category.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-    features: [
-      "Premium quality",
-      "Authentic Bluebird Arts product",
-      "Highly durable",
-      "Professional grade"
-    ]
+    features: features
   });
 });
 

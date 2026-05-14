@@ -6,6 +6,7 @@ import { duluxProducts } from "@/lib/data/duluxPaints";
 import { sprayPaints } from "@/lib/data/sprayPaints";
 import { hardwareProducts } from "@/lib/data/hardwareProducts";
 import { accessoryProducts } from "@/lib/data/accessoryProducts";
+import { bluebirdProducts } from "@/lib/data/bluebirdProducts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://hattraders.com";
@@ -45,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...sanitarySlugs.map((s) => ({ url: `${base}/products/sanitary/${s}`, priority: 0.7 })),
     ...hardwareProducts.map((p) => ({ url: `${base}/products/hardware-tools/${p.category}/${p.slug}`, priority: 0.7 })),
     ...accessoryProducts.map((p) => ({ url: `${base}/products/paint-accessories/${p.category}/${p.slug}`, priority: 0.7 })),
+    ...bluebirdProducts.map((p) => ({ url: `${base}/products/bluebird-arts/${p.slug}`, priority: 0.7 })),
   ].map((p) => ({ ...p, lastModified: now, changeFrequency: "monthly" as const }));
 
   return [...staticPages, ...dynamicPages];

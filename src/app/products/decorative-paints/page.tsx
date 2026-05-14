@@ -48,6 +48,13 @@ const products = [
     description:
       "Professional aerosol spray paints for automotive, industrial and decorative applications, available in a wide range of finishes and colours.",
   },
+  {
+    name: "Bluebird Arts",
+    href: "/products/bluebird-arts",
+    description:
+      "Exclusive Bluebird Arts collection — professional quality acrylics, fabric paints and art accessories for creative excellence.",
+    badge: "Artist Choice",
+  },
 ];
 
 export default function DecorativePaintsPage() {
