@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://alwaqaspaint.com
+
+# Sitemaps
+Sitemap: https://alwaqaspaint.com/sitemap.xml
