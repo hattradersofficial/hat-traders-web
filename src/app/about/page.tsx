@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Users, Building2, Handshake, Target } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -121,19 +122,41 @@ export default function AboutPage() {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="h-48 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center text-6xl">
-                    🏗️
+                  <div className="h-48 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl relative overflow-hidden group">
+                    <Image
+                      src="/Odourless-Air-Care.png"
+                      alt="Paints"
+                      fill
+                      className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
-                  <div className="h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center text-4xl">
-                    🔧
+                  <div className="h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl relative overflow-hidden group">
+                    <Image
+                      src="/tools/PT_SMT-6326_RotaryHammerDrill_600x600.webp"
+                      alt="Tools"
+                      fill
+                      className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
-                  <div className="h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center text-4xl">
-                    🎨
+                  <div className="h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl relative overflow-hidden group">
+                    <Image
+                      src="https://cdn.shopify.com/s/files/1/0667/7748/1411/files/Signature-Canvas-Pad-Mockup-1.jpg"
+                      alt="Art Supplies"
+                      fill
+                      className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                      unoptimized
+                    />
                   </div>
-                  <div className="h-48 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl flex items-center justify-center text-6xl">
-                    🚿
+                  <div className="h-48 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl relative overflow-hidden group">
+                    <Image
+                      src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&auto=format&fit=crop"
+                      alt="Sanitary Ware"
+                      fill
+                      className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                      unoptimized
+                    />
                   </div>
                 </div>
               </div>

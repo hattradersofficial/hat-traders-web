@@ -11,7 +11,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://hattraders.com/products/bluebird-arts" },
 };
 
-export default function BluebirdArtsPage() {
+interface BluebirdPageProps {
+  searchParams: Promise<{ page?: string }>;
+}
+
+export default async function BluebirdArtsPage({ searchParams }: BluebirdPageProps) {
+  const { page } = await searchParams;
+  const currentPage = Math.max(1, parseInt(page || "1") || 1);
+  const itemsPerPage = 20;
+  const totalProducts = bluebirdProducts.length;
+  const totalPages = Math.ceil(totalProducts / itemsPerPage);
+  
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedProducts = bluebirdProducts.slice(startIndex, endIndex);
+
   return (
     <>
       <section className="bg-gradient-to-br from-indigo-50 to-blue-100 text-blue-900 py-20">
@@ -20,10 +34,10 @@ export default function BluebirdArtsPage() {
             <Link href="/" className="hover:opacity-100 transition-opacity">Home</Link>
             <ChevronRight className="w-4 h-4" />
             <Link
-              href="/products"
+              href="/products/decorative-paints"
               className="hover:opacity-100 transition-opacity"
             >
-              Products
+              Decorative Paints
             </Link>
             <ChevronRight className="w-4 h-4" />
             <span>Bluebird Arts</span>
@@ -42,12 +56,12 @@ export default function BluebirdArtsPage() {
               Our Bluebird Arts Collection
             </h2>
             <div className="text-sm font-semibold text-gray-500 mt-4 md:mt-0">
-              Showing {bluebirdProducts.length} products
+              Showing {startIndex + 1}-{Math.min(endIndex, totalProducts)} of {totalProducts} products
             </div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bluebirdProducts.map((product) => (
+            {paginatedProducts.map((product) => (
               <Link
                 key={product.slug}
                 href={`/products/bluebird-arts/${product.slug}`}
@@ -83,6 +97,61 @@ export default function BluebirdArtsPage() {
               </Link>
             ))}
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="mt-16 flex justify-center items-center gap-2">
+              <Link
+                href={`/products/bluebird-arts?page=${Math.max(1, currentPage - 1)}`}
+                className={`px-4 py-2 border rounded-lg text-sm font-bold transition-all ${
+                  currentPage === 1
+                    ? "opacity-50 cursor-not-allowed bg-gray-50 text-gray-400"
+                    : "hover:bg-blue-600 hover:text-white border-blue-200 text-blue-600"
+                }`}
+              >
+                Previous
+              </Link>
+              <div className="flex gap-1">
+                {[...Array(totalPages)].map((_, i) => {
+                  const pageNum = i + 1;
+                  // Show limited page numbers if there are too many
+                  if (
+                    pageNum === 1 ||
+                    pageNum === totalPages ||
+                    (pageNum >= currentPage - 1 && pageNum <= currentPage + 1)
+                  ) {
+                    return (
+                      <Link
+                        key={pageNum}
+                        href={`/products/bluebird-arts?page=${pageNum}`}
+                        className={`w-10 h-10 flex items-center justify-center rounded-lg text-sm font-bold transition-all ${
+                          currentPage === pageNum
+                            ? "bg-blue-600 text-white"
+                            : "hover:bg-blue-50 text-blue-600 border border-blue-100"
+                        }`}
+                      >
+                        {pageNum}
+                      </Link>
+                    );
+                  }
+                  if (pageNum === currentPage - 2 || pageNum === currentPage + 2) {
+                    return <span key={pageNum} className="px-1 text-gray-400">...</span>;
+                  }
+                  return null;
+                })}
+              </div>
+              <Link
+                href={`/products/bluebird-arts?page=${Math.min(totalPages, currentPage + 1)}`}
+                className={`px-4 py-2 border rounded-lg text-sm font-bold transition-all ${
+                  currentPage === totalPages
+                    ? "opacity-50 cursor-not-allowed bg-gray-50 text-gray-400"
+                    : "hover:bg-blue-600 hover:text-white border-blue-200 text-blue-600"
+                }`}
+              >
+                Next
+              </Link>
+            </div>
+          )}
 
           <div className="mt-20 bg-blue-50 border border-blue-100 rounded-2xl p-8 text-center max-w-4xl mx-auto">
             <h3 className="text-2xl font-black text-gray-900 mb-3">

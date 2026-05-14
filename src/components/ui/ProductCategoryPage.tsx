@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
 interface Product {
@@ -6,6 +7,7 @@ interface Product {
   href: string;
   description: string;
   badge?: string;
+  image?: string;
 }
 
 interface ProductCategoryPageProps {
@@ -15,7 +17,7 @@ interface ProductCategoryPageProps {
   breadcrumb: string;
   breadcrumbHref: string;
   products: Product[];
-  icon: string;
+  image: string;
   color: string;
 }
 
@@ -26,7 +28,7 @@ export default function ProductCategoryPage({
   breadcrumb,
   breadcrumbHref,
   products,
-  icon,
+  image,
   color,
 }: ProductCategoryPageProps) {
   return (
@@ -41,13 +43,21 @@ export default function ProductCategoryPage({
               {breadcrumb}
             </Link>
           </div>
-          <div className="flex items-center gap-4 mb-4">
-            <span className="text-5xl">{icon}</span>
+          <div className="flex items-center gap-6 mb-4">
+            <div className="relative w-24 h-24 sm:w-32 sm:h-32 bg-white/40 backdrop-blur-sm rounded-3xl p-4 border border-white/50 shadow-xl group-hover:rotate-3 transition-transform">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                className="object-contain p-2"
+                unoptimized={image.startsWith('http')}
+              />
+            </div>
             <div>
               <p className="text-sm font-bold uppercase tracking-widest opacity-60 mb-1">
                 {subtitle}
               </p>
-              <h1 className="text-4xl lg:text-5xl font-black">{title}</h1>
+              <h1 className="text-4xl lg:text-5xl font-black tracking-tight">{title}</h1>
             </div>
           </div>
           <p className="max-w-xl leading-relaxed opacity-75 mt-2">{description}</p>
@@ -62,8 +72,19 @@ export default function ProductCategoryPage({
               <Link
                 key={product.name}
                 href={product.href}
-                className="group bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
+                {product.image && (
+                  <div className="relative w-full h-40 mb-6 bg-gray-50 rounded-xl overflow-hidden p-4 group-hover:scale-105 transition-transform duration-500">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-contain"
+                      unoptimized={product.image.startsWith('http')}
+                    />
+                  </div>
+                )}
                 <div className="flex items-start justify-between mb-3">
                   <h2 className="text-lg font-bold text-gray-900 group-hover:text-orange-500 transition-colors">
                     {product.name}

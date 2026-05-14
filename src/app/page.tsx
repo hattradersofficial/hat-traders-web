@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Shield,
@@ -24,7 +25,7 @@ const categories = [
     href: "/products/decorative-paints",
     description:
       "Premium quality interior & exterior paints from top brands like Nippon, ICI Dulux, Gobis, Sparco and more.",
-    icon: "🎨",
+    image: "/Odourless-Air-Care.png",
     color: "from-orange-50 to-orange-100",
     border: "border-orange-200",
     brands: ["Gobis", "Nippon", "ICI Dulux", "Sparco"],
@@ -34,7 +35,7 @@ const categories = [
     href: "/products/hardware-tools",
     description:
       "Professional-grade power tools, hand tools, drill bits, grinder discs, sandpapers and blades.",
-    icon: "🔧",
+    image: "/tools/PT_SMT-6326_RotaryHammerDrill_600x600.webp",
     color: "from-blue-50 to-blue-100",
     border: "border-blue-200",
     brands: ["Power Tools", "Hand Tools", "Drill Bits", "Grinder Discs"],
@@ -44,7 +45,7 @@ const categories = [
     href: "/products/sanitary",
     description:
       "Top-quality sanitary solutions from Faisal, Porta, Sunny, Accufit, including water tanks.",
-    icon: "🚿",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&auto=format&fit=crop",
     color: "from-teal-50 to-teal-100",
     border: "border-teal-200",
     brands: ["Faisal", "Porta", "Sunny", "Accufit"],
@@ -54,17 +55,27 @@ const categories = [
     href: "/products/paint-accessories",
     description:
       "Complete range of painting accessories including brushes, rollers, deco sets and scrappers.",
-    icon: "🖌️",
+    image: "/tools/captain-brush.webp",
     color: "from-purple-50 to-purple-100",
     border: "border-purple-200",
     brands: ["Brushes", "Rollers", "Deco Sets", "Scrappers"],
+  },
+  {
+    title: "Spray Paints",
+    href: "/products/decorative-paints/spray-paints",
+    description:
+      "Professional aerosol spray paints for automotive, industrial and decorative applications.",
+    image: "/tools/Paint-Spray-Bottles.png",
+    color: "from-red-50 to-red-100",
+    border: "border-red-200",
+    brands: ["SMT", "MUBAH", "Aerosol"],
   },
   {
     title: "Bluebird Arts",
     href: "/products/bluebird-arts",
     description:
       "Exclusive Bluebird Arts collection — crafted for those who demand excellence in design and artistry.",
-    icon: "🦋",
+    image: "https://cdn.shopify.com/s/files/1/0667/7748/1411/files/Signature-Canvas-Pad-Mockup-1.jpg",
     color: "from-sky-50 to-sky-100",
     border: "border-sky-200",
     brands: ["Exclusive Collection"],
@@ -143,10 +154,24 @@ export default function HomePage() {
                 href={cat.href}
                 className={`group relative bg-gradient-to-br ${cat.color} border ${cat.border} rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden`}
               >
-                <div className="absolute top-4 right-4 text-4xl opacity-20 group-hover:opacity-40 transition-opacity">
-                  {cat.icon}
+                <div className="absolute top-4 right-4 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Image
+                    src={cat.image}
+                    alt={cat.title}
+                    fill
+                    className="object-contain"
+                    unoptimized={cat.image.startsWith('http')}
+                  />
                 </div>
-                <div className="text-3xl mb-3">{cat.icon}</div>
+                <div className="relative w-16 h-16 mb-4 overflow-hidden rounded-xl bg-white/50 p-2 border border-white/50 group-hover:scale-110 transition-transform">
+                   <Image
+                    src={cat.image}
+                    alt={cat.title}
+                    fill
+                    className="object-contain p-1"
+                    unoptimized={cat.image.startsWith('http')}
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
                   {cat.title}
                 </h3>

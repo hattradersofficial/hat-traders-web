@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,6 +63,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://hattraders.com",
   },
+  icons: {
+    icon: "/cropped-HAT-Traders-logo-.png",
+    apple: "/cropped-HAT-Traders-logo-.png",
+  },
 };
 
 export default function RootLayout({
@@ -71,8 +75,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-white text-gray-900 antialiased">
+    <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-white text-gray-900 antialiased" suppressHydrationWarning>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

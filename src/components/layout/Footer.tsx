@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Share2, Globe, MessageCircle } from "lucide-react";
 
 const footerLinks = {
@@ -35,10 +36,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-4">
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-black text-lg">
-                  HT
+            <Link href="/" className="inline-block mb-6 group">
+              <div className="flex items-center gap-3">
+                <div className="relative w-12 h-12 bg-white rounded-lg p-1 overflow-hidden shadow-lg group-hover:scale-105 transition-transform">
+                  <Image
+                    src="/cropped-HAT-Traders-logo-.png"
+                    alt="Hat Traders Logo"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <div className="text-white font-black text-xl uppercase tracking-tight">

@@ -15,12 +15,14 @@ const products = [
     description:
       "High-quality paint brushes in all sizes – from fine detail brushes to wide wall brushes – for a flawless finish every time.",
     badge: "Popular",
+    image: "/tools/captain-brush.webp",
   },
   {
     name: "Rollers",
     href: "/products/paint-accessories/rollers",
     description:
       "Professional paint rollers with smooth and textured options for fast, even coverage on walls and ceilings.",
+    image: "/tools/UNIVERSAL-ROLLER-N-EXT-1.webp",
   },
   {
     name: "Deco Sets",
@@ -28,12 +30,14 @@ const products = [
     description:
       "Complete decorative paint sets with all the tools you need for creative patterns, textures and decorative finishes.",
     badge: "New",
+    image: "/tools/istockphoto-495665869-612x612.jpg",
   },
   {
     name: "Scrappers",
     href: "/products/paint-accessories/scrappers",
     description:
       "Durable scrapers and putty knives for surface preparation, paint removal and applying fillers to walls.",
+    image: "/tools/scrapper.png",
   },
 ];
 
@@ -46,7 +50,7 @@ export default function PaintAccessoriesPage() {
       breadcrumb="Paint Accessories"
       breadcrumbHref="/products/paint-accessories"
       products={products}
-      icon="🖌️"
+      image="/tools/captain-brush.webp"
       color="from-purple-50 to-purple-100 text-purple-900"
     />
   );

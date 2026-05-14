@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Search, ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -48,32 +50,40 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setIsOpen(false);
+      setSearchQuery("");
+    }
+  };
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24 lg:h-32">
           {/* Logo */}
-          <Link href="/" className="flex flex-col items-start">
-            <div className="flex items-center gap-2">
-              {/* Simple SVG Logo representing the one in the image */}
-              <div className="w-12 h-12 relative flex items-center justify-center">
-                <div className="absolute inset-0 bg-orange-500 rounded-full scale-75 opacity-20 animate-pulse" />
-                <svg
-                  viewBox="0 0 100 100"
-                  className="w-10 h-10 text-orange-500 fill-current"
-                >
-                  <path d="M50 10 L10 40 L10 80 L90 80 L90 40 Z" />
-                  <circle cx="50" cy="50" r="15" className="text-black" />
-                </svg>
+          <Link href="/" className="flex flex-col items-start group">
+            <div className="flex items-center gap-3">
+              <div className="relative w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center bg-white rounded-xl shadow-sm group-hover:shadow-md transition-all p-1">
+                <Image
+                  src="/cropped-HAT-Traders-logo-.png"
+                  alt="Hat Traders Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tighter text-black uppercase leading-none">
+                {/* <span className="text-2xl lg:text-3xl font-black tracking-tighter text-black uppercase leading-none">
                   Hat Traders
                 </span>
-                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-1">
+                <span className="text-[10px] lg:text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">
                   Complete Construction Solutions
-                </span>
+                </span> */}
               </div>
             </div>
           </Link>
@@ -88,7 +98,7 @@ export default function Navbar() {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <div className="flex items-center">
-                   {idx !== 0 && <span className="text-gray-300 mx-2">|</span>}
+                  {idx !== 0 && <span className="text-gray-300 mx-2">|</span>}
                   <Link
                     href={item.href}
                     className={cn(
@@ -134,14 +144,18 @@ export default function Navbar() {
 
           {/* Search Bar */}
           <div className="hidden lg:flex items-center ml-4">
-            <div className="relative group">
+            <form onSubmit={handleSearch} className="relative group">
               <input
                 type="text"
                 placeholder="Search Products"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-4 pr-10 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all w-64 text-sm"
               />
-              <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-focus-within:text-orange-500 transition-colors" />
-            </div>
+              <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2">
+                <Search className="w-4 h-4 text-gray-400 group-focus-within:text-orange-500 transition-colors" />
+              </button>
+            </form>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -164,14 +178,18 @@ export default function Navbar() {
             className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
             <div className="p-4 space-y-4">
-              <div className="relative">
+              <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
                   placeholder="Search Products"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-4 pr-10 py-2 border border-gray-200 rounded-lg text-sm"
                 />
-                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-              </div>
+                <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2">
+                  <Search className="w-4 h-4 text-gray-400" />
+                </button>
+              </form>
               <div className="space-y-1">
                 {navItems.map((item) => (
                   <div key={item.name} className="py-2">
