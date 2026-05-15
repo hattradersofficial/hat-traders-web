@@ -7,7 +7,7 @@ import { ArrowRight, Phone, ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=1920&q=80&auto=format&fit=crop",
+      "https://media.fortuneindia.com/fortune-india/import/2022-06/1cb83231-d836-44d1-8209-930186557f09/paint.jpg?w=1920&auto=format,compress&q=80",
     badge: "Decorative Paints",
     heading: "Transform Your Walls with Premium Paints",
     sub: "Gobis, Nippon, ICI Dulux, Sparco, Glorex & more — every shade, every finish.",
@@ -34,7 +34,7 @@ const slides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=1920&q=80&auto=format&fit=crop",
+      "https://nelsonpaints.com/wp-content/uploads/2022/01/grey.jpg",
     badge: "Paint Accessories",
     heading: "The Right Accessories for a Perfect Finish",
     sub: "Brushes, rollers, deco sets and scrappers — everything the professional painter needs.",
@@ -43,7 +43,7 @@ const slides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=1920&q=80&auto=format&fit=crop",
+      "https://img.magnific.com/free-photo/frame-stationary-items-creativity-art-studio_23-2148660932.jpg?semt=ais_hybrid&w=1920&q=80",
     badge: "Bluebird Arts",
     heading: "Where Artistry Meets Architecture",
     sub: "Exclusive decorative art collections, metallic finishes and specialty paints.",
