@@ -23,15 +23,7 @@ const slides = [
     cta: { label: "Shop Tools", href: "/products/hardware-tools" },
     accent: "from-blue-600 to-cyan-500",
   },
-  {
-    image:
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=80&auto=format&fit=crop",
-    badge: "Sanitary Ware",
-    heading: "Premium Sanitary Solutions",
-    sub: "Faisal, Porta, Sunny, Accufit and water tanks — style meets durability.",
-    cta: { label: "Shop Sanitary", href: "/products/sanitary" },
-    accent: "from-teal-600 to-emerald-500",
-  },
+
   {
     image:
       "https://nelsonpaints.com/wp-content/uploads/2022/01/grey.jpg",
@@ -79,7 +71,7 @@ export default function HeroSection() {
   const slide = slides[current];
 
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: "92vh", minHeight: 520, maxHeight: 800 }}>
+    <section className="relative w-full overflow-hidden h-[calc(100vh-110px)] min-h-[500px] max-h-[900px]">
       {/* Background Images — all pre-loaded, only active one is visible */}
       {slides.map((s, i) => (
         <div
@@ -95,7 +87,7 @@ export default function HeroSection() {
             loading={i === 0 ? "eager" : "lazy"}
           />
           {/* Dark overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
       ))}
@@ -159,11 +151,10 @@ export default function HeroSection() {
               key={i}
               onClick={() => goTo(i)}
               aria-label={`Go to slide ${i + 1}`}
-              className={`rounded-full transition-all duration-300 ${
-                i === current
-                  ? "w-7 h-2.5 bg-white"
-                  : "w-2.5 h-2.5 bg-white/40 hover:bg-white/60"
-              }`}
+              className={`rounded-full transition-all duration-300 ${i === current
+                ? "w-7 h-2.5 bg-white"
+                : "w-2.5 h-2.5 bg-white/40 hover:bg-white/60"
+                }`}
             />
           ))}
         </div>
@@ -184,23 +175,20 @@ export default function HeroSection() {
             key={i}
             onClick={() => goTo(i)}
             aria-label={`Go to ${s.badge}`}
-            className={`group flex items-center gap-2 transition-all duration-300 ${
-              i === current ? "opacity-100" : "opacity-40 hover:opacity-70"
-            }`}
+            className={`group flex items-center gap-2 transition-all duration-300 ${i === current ? "opacity-100" : "opacity-40 hover:opacity-70"
+              }`}
           >
             <span
-              className={`text-white text-xs font-semibold transition-all duration-300 ${
-                i === current ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-              }`}
+              className={`text-white text-xs font-semibold transition-all duration-300 ${i === current ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                }`}
             >
               {s.badge}
             </span>
             <span
-              className={`block rounded-full transition-all duration-300 ${
-                i === current
-                  ? `w-1.5 h-8 bg-gradient-to-b ${s.accent}`
-                  : "w-1 h-4 bg-white/60"
-              }`}
+              className={`block rounded-full transition-all duration-300 ${i === current
+                ? `w-1.5 h-8 bg-gradient-to-b ${s.accent}`
+                : "w-1 h-4 bg-white/60"
+                }`}
             />
           </button>
         ))}

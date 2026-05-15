@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import PageHeader from "@/components/ui/PageHeader";
 
 interface Product {
   name: string;
@@ -19,6 +20,7 @@ interface ProductCategoryPageProps {
   products: Product[];
   image: string;
   color: string;
+  backgroundImage?: string;
 }
 
 export default function ProductCategoryPage({
@@ -30,39 +32,16 @@ export default function ProductCategoryPage({
   products,
   image,
   color,
+  backgroundImage = "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1920&q=80&auto=format&fit=crop",
 }: ProductCategoryPageProps) {
   return (
     <>
-      {/* Hero */}
-      <section className={`bg-gradient-to-br ${color} py-20`}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm font-semibold mb-4 opacity-70">
-            <Link href="/" className="hover:opacity-100 transition-opacity">Home</Link>
-            <ChevronRight className="w-4 h-4" />
-            <Link href={breadcrumbHref} className="hover:opacity-100 transition-opacity">
-              {breadcrumb}
-            </Link>
-          </div>
-          <div className="flex items-center gap-6 mb-4">
-            <div className="relative w-24 h-24 sm:w-32 sm:h-32 bg-white/40 backdrop-blur-sm rounded-3xl p-4 border border-white/50 shadow-xl group-hover:rotate-3 transition-transform">
-              <Image
-                src={image}
-                alt={title}
-                fill
-                className="object-contain p-2"
-                unoptimized={image.startsWith('http')}
-              />
-            </div>
-            <div>
-              <p className="text-sm font-bold uppercase tracking-widest opacity-60 mb-1">
-                {subtitle}
-              </p>
-              <h1 className="text-4xl lg:text-5xl font-black tracking-tight">{title}</h1>
-            </div>
-          </div>
-          <p className="max-w-xl leading-relaxed opacity-75 mt-2">{description}</p>
-        </div>
-      </section>
+      <PageHeader
+        title={title}
+        subtitle={description}
+        backgroundImage={backgroundImage}
+        breadcrumb={[{ label: breadcrumb, href: breadcrumbHref }]}
+      />
 
       {/* Products Grid */}
       <section className="py-20 bg-white">

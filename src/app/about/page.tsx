@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Users, Building2, Handshake, Target } from "lucide-react";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 export const metadata: Metadata = {
   title: "About Us",
   description:
@@ -47,22 +49,12 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      {/* Page Hero */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-orange-400 text-sm font-semibold mb-4">
-            <Link href="/" className="hover:text-orange-300 transition-colors">Home</Link>
-            <span>/</span>
-            <span>About Us</span>
-          </div>
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">About Hat Traders</h1>
-          <p className="text-gray-300 max-w-xl leading-relaxed">
-            Pakistan&apos;s complete construction solutions provider — serving
-            contractors, designers and homeowners with premium materials for
-            over two decades.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        title="About Hat Traders"
+        subtitle="Pakistan's complete construction solutions provider — serving contractors, designers and homeowners for over two decades."
+        backgroundImage="https://media.fortuneindia.com/fortune-india/import/2022-06/1cb83231-d836-44d1-8209-930186557f09/paint.jpg?w=1920&auto=format,compress&q=80"
+        breadcrumb={[{ label: "About Us" }]}
+      />
 
       {/* Stats */}
       <section className="bg-orange-500 py-12">
@@ -70,8 +62,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((s) => (
               <div key={s.label} className="text-center text-white">
-                <div className="text-4xl font-black mb-1">{s.value}</div>
-                <div className="text-orange-100 text-sm font-medium">{s.label}</div>
+                <div className="text-4xl md:text-5xl font-black mb-1 tracking-tighter">{s.value}</div>
+                <div className="text-orange-100 text-[10px] md:text-xs font-black uppercase tracking-widest">{s.label}</div>
               </div>
             ))}
           </div>
@@ -79,18 +71,18 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="text-orange-500 text-sm font-bold uppercase tracking-widest mb-2">
-                Our Story
+            <div className="order-2 lg:order-1">
+              <div className="text-orange-500 text-xs font-black uppercase tracking-[0.2em] mb-4">
+                OUR JOURNEY
               </div>
-              <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6">
+              <h2 className="text-3xl lg:text-5xl font-black text-gray-900 mb-8 tracking-tighter leading-[0.9]">
                 Building Pakistan,{" "}
                 <span className="text-orange-500">One Project at a Time</span>
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-6 text-gray-600 leading-relaxed text-base">
                 <p>
                   Hat Traders was founded with a simple vision: to make
                   high-quality construction materials accessible to every
@@ -112,54 +104,65 @@ export default function AboutPage() {
                   every project exceeds expectations.
                 </p>
               </div>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 mt-8 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-lg transition-all hover:-translate-y-0.5 shadow-lg shadow-orange-500/25"
-              >
-                Get in Touch <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="flex flex-wrap gap-4 mt-10">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-black px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-xl shadow-orange-500/20 uppercase text-xs tracking-widest"
+                >
+                  Get in Touch <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/products/decorative-paints"
+                  className="inline-flex items-center gap-2 bg-gray-900 hover:bg-black text-white font-black px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-xl shadow-black/10 uppercase text-xs tracking-widest"
+                >
+                  View Products
+                </Link>
+              </div>
             </div>
-            <div className="relative">
+            <div className="order-1 lg:order-2 relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="h-48 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl relative overflow-hidden group">
+                  <div className="h-64 bg-gray-50 rounded-3xl relative overflow-hidden group border border-gray-100">
                     <Image
                       src="/Odourless-Air-Care.png"
                       alt="Paints"
                       fill
-                      className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                      className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
                     />
                   </div>
-                  <div className="h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl relative overflow-hidden group">
+                  <div className="h-44 bg-gray-50 rounded-3xl relative overflow-hidden group border border-gray-100">
                     <Image
                       src="/tools/PT_SMT-6326_RotaryHammerDrill_600x600.webp"
                       alt="Tools"
                       fill
-                      className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                      className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
                     />
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
-                  <div className="h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl relative overflow-hidden group">
+                  <div className="h-44 bg-gray-50 rounded-3xl relative overflow-hidden group border border-gray-100">
                     <Image
                       src="https://cdn.shopify.com/s/files/1/0667/7748/1411/files/Signature-Canvas-Pad-Mockup-1.jpg"
                       alt="Art Supplies"
                       fill
-                      className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                      className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
                       unoptimized
                     />
                   </div>
-                  <div className="h-48 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl relative overflow-hidden group">
+                  <div className="h-64 bg-gray-50 rounded-3xl relative overflow-hidden group border border-gray-100">
                     <Image
-                      src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&auto=format&fit=crop"
+                      src="https://thestationers.pk/cdn/shop/products/nylon-paint-brush-set-for-base-making-6pcs-the-stationers-3.jpg?v=1708445531"
                       alt="Sanitary Ware"
                       fill
-                      className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                      className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
                       unoptimized
                     />
                   </div>
                 </div>
               </div>
+              {/* Decorative element */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl -z-10" />
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl -z-10" />
             </div>
           </div>
         </div>

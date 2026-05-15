@@ -80,7 +80,11 @@ export default function Navbar() {
             </div>
             <div className="ml-3 hidden sm:block">
               <div className="text-lg md:text-xl font-black text-gray-900 tracking-tighter leading-none uppercase">Hat Traders</div>
-              <div className="text-[8px] md:text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-0.5">Complete Construction Solutions</div>
+              <div className="flex justify-between w-full text-[6px] md:text-[6px] text-orange-500 font-black uppercase mt-1 leading-none">
+                {"COMPLETE CONSTRUCTION SOLUTIONS".split(" ").map((word, i) => (
+                  <span key={i}>{word}</span>
+                ))}
+              </div>
             </div>
           </Link>
 
@@ -108,8 +112,8 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none">Call Us Now</span>
-              <a href="tel:+923001234567" className="text-xs md:text-sm font-black text-gray-900 hover:text-orange-500 transition-colors tracking-tight mt-0.5">
-                +92 300 123 4567
+              <a href="tel:+923335093223" className="text-xs md:text-sm font-black text-gray-900 hover:text-orange-500 transition-colors tracking-tight mt-0.5">
+                +92 333 509 3223
               </a>
             </div>
           </div>
@@ -196,13 +200,13 @@ export default function Navbar() {
           >
             <div className="p-4 space-y-6">
               {/* Mobile Contact Bar */}
-              <div className="flex items-center justify-between p-3 bg-orange-50 rounded-xl">
+              <a href="tel:+923335093223" className="flex items-center justify-between p-3 bg-orange-50 rounded-xl">
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-orange-500" />
-                  <span className="text-sm font-bold text-gray-900">+92 300 123 4567</span>
+                  <span className="text-sm font-bold text-gray-900">+92 333 509 3223</span>
                 </div>
                 <span className="text-[10px] font-black text-orange-600 uppercase">Call Now</span>
-              </div>
+              </a>
 
               {/* Mobile Search */}
               <form onSubmit={handleSearch} className="relative">
@@ -242,7 +246,7 @@ export default function Navbar() {
                         </button>
                       )}
                     </div>
-                    
+
                     {item.dropdown && (
                       <AnimatePresence>
                         {mobileActiveDropdown === item.name && (

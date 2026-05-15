@@ -64,7 +64,11 @@ export const metadata: Metadata = {
     canonical: "https://hattraders.com",
   },
   icons: {
-    icon: "/cropped-HAT-Traders-logo-.png",
+    icon: [
+      { url: "/cropped-HAT-Traders-logo-.png" },
+      { url: "/cropped-HAT-Traders-logo-.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/cropped-HAT-Traders-logo-.png",
     apple: "/cropped-HAT-Traders-logo-.png",
   },
 };

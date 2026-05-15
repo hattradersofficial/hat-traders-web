@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
@@ -12,20 +14,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-orange-400 text-sm font-semibold mb-4">
-            <Link href="/" className="hover:text-orange-300 transition-colors">Home</Link>
-            <span>/</span>
-            <span>Contact Us</span>
-          </div>
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">Contact Hat Traders</h1>
-          <p className="text-gray-300 max-w-xl">
-            Have a question or need expert advice? We&apos;re here to help. Reach
-            out to us through any of the channels below.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        title="Contact Hat Traders"
+        subtitle="Have a question or need expert advice? We're here to help. Reach out to us through any of the channels below."
+        backgroundImage="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80&auto=format&fit=crop"
+        breadcrumb={[{ label: "Contact Us" }]}
+      />
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -37,21 +31,21 @@ export default function ContactPage() {
                 {[
                   {
                     icon: <Phone className="w-5 h-5" />,
-                    label: "Phone",
-                    value: "+92 300 123 4567",
-                    href: "tel:+923001234567",
+                    label: "Phone / WhatsApp",
+                    value: "+92 333 509 3223",
+                    href: "https://wa.me/923335093223",
                   },
                   {
                     icon: <Mail className="w-5 h-5" />,
                     label: "Email",
-                    value: "info@hattraders.com",
-                    href: "mailto:info@hattraders.com",
+                    value: "hat.traders.official@gmail.com",
+                    href: "mailto:hat.traders.official@gmail.com",
                   },
                   {
                     icon: <MapPin className="w-5 h-5" />,
                     label: "Address",
-                    value: "Main Market, Lahore, Pakistan",
-                    href: "https://maps.google.com",
+                    value: "Manzoor Plaza T Chowk, near wateem hospital Rawat Islamabad",
+                    href: "https://maps.google.com/?q=Manzoor+Plaza+T+Chowk+Rawat+Islamabad",
                   },
                   {
                     icon: <Clock className="w-5 h-5" />,

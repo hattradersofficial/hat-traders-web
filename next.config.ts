@@ -14,6 +14,54 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "backiee.com",
+      },
+      {
+        protocol: "https",
+        hostname: "nelsonpaints.com",
+      },
+      {
+        protocol: "https",
+        hostname: "img.magnific.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.shopify.com",
+      },
+      {
+        protocol: "https",
+        hostname: "thestationers.pk",
+      },
+      {
+        protocol: "https",
+        hostname: "gobispaints.com",
+      },
+      {
+        protocol: "https",
+        hostname: "sparcopaints.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.dulux.com.pk",
+      },
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com",
+      },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ideahobby.eu",
+      },
+      {
+        protocol: "https",
+        hostname: "media.fortuneindia.com",
       }
     ],
   },

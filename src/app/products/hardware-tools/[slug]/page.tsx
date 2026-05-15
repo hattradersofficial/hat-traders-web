@@ -126,11 +126,19 @@ export default async function HardwareToolSlugPage({ params }: { params: Promise
             <h3 className="text-2xl font-black text-gray-900 mb-3">Need Expert Advice?</h3>
             <p className="text-gray-600 mb-6">Our specialists will help you choose the right product.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2.5 rounded-lg transition-all">
-                Contact Us <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a href="tel:+923001234567" className="inline-flex items-center gap-2 border border-orange-300 text-orange-600 hover:bg-orange-100 font-bold px-6 py-2.5 rounded-lg transition-all">
-                <Phone className="w-4 h-4" /> Call Now
+              <a
+                href="tel:+923335093223"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2.5 rounded-lg transition-all"
+              >
+                <Phone className="w-4 h-4" /> Request Quote
+              </a>
+              <a
+                href={`https://wa.me/923335093223?text=${encodeURIComponent(`Hi, I'm interested in ${tool.name} products and want to know more about the range.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-orange-300 text-orange-600 hover:bg-orange-100 font-bold px-6 py-2.5 rounded-lg transition-all"
+              >
+                Message Us
               </a>
             </div>
           </div>

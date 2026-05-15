@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
     {
       title: "Contact Us",
       content:
-        "If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at info@hattraders.com or visit our Contact page.",
+        "If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at hat.traders.official@gmail.com or visit our Contact page.",
     },
   ];
 

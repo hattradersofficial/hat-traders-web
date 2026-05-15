@@ -4,6 +4,8 @@ import Image from "next/image";
 import { ChevronRight, ArrowRight, Search as SearchIcon } from "lucide-react";
 import { getAllProducts } from "@/lib/data/allProducts";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 export const metadata: Metadata = {
   title: "Search Results | Hat Traders",
   description: "Search for premium construction materials, paints, and tools at Hat Traders.",
@@ -28,21 +30,12 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   return (
     <>
-      <section className="bg-gray-50 border-b border-gray-100 py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm font-semibold mb-4 opacity-60">
-            <Link href="/" className="hover:opacity-100 transition-opacity">Home</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span>Search</span>
-          </div>
-          <h1 className="text-3xl lg:text-4xl font-black text-gray-900">
-            {query ? `Search Results for "${query}"` : "Search Products"}
-          </h1>
-          <p className="text-gray-500 mt-2">
-            {results.length} results found
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        title={query ? `Search: ${query}` : "Product Search"}
+        subtitle={query ? `${results.length} products found matching your search.` : "Browse our complete catalog of construction solutions."}
+        backgroundImage="https://images.unsplash.com/photo-1581094288338-2314dddb7ec3?w=1920&q=80&auto=format&fit=crop"
+        breadcrumb={[{ label: "Search" }]}
+      />
 
       <section className="py-20 bg-white min-h-[50vh]">
         <div className="container mx-auto px-4">

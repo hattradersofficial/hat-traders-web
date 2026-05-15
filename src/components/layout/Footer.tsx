@@ -50,7 +50,7 @@ export default function Footer() {
                   <div className="text-white font-black text-xl uppercase tracking-tight">
                     Hat Traders
                   </div>
-                  <div className="text-[10px] text-gray-400 uppercase tracking-widest">
+                  <div className="text-[6px] text-gray-400 uppercase tracking-widest">
                     Complete Construction Solutions
                   </div>
                 </div>
@@ -63,22 +63,22 @@ export default function Footer() {
             </p>
             <div className="space-y-2">
               <a
-                href="tel:+923001234567"
+                href="tel:+923335093223"
                 className="flex items-center gap-2 text-sm hover:text-orange-400 transition-colors"
               >
                 <Phone className="w-4 h-4 text-orange-500" />
-                +92 300 123 4567
+                +92 333 509 3223
               </a>
               <a
-                href="mailto:info@hattraders.com"
+                href="mailto:hat.traders.official@gmail.com"
                 className="flex items-center gap-2 text-sm hover:text-orange-400 transition-colors"
               >
                 <Mail className="w-4 h-4 text-orange-500" />
-                info@hattraders.com
+                hat.traders.official@gmail.com
               </a>
               <div className="flex items-start gap-2 text-sm">
                 <MapPin className="w-4 h-4 text-orange-500 mt-0.5 shrink-0" />
-                <span>Main Market, Lahore, Pakistan</span>
+                <span>Manzoor Plaza T Chowk, near wateem hospital Rawat Islamabad</span>
               </div>
             </div>
             <div className="flex items-center gap-3 mt-6">
@@ -101,7 +101,7 @@ export default function Footer() {
                 <Globe className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/923001234567"
+                href="https://wa.me/923335093223"
                 aria-label="WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"

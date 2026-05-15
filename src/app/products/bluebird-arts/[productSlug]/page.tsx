@@ -117,17 +117,19 @@ export default async function BluebirdProductDetailPage({
 
               <div className="flex flex-col sm:flex-row gap-4 mt-auto">
                 <a
-                  href="tel:+923001234567"
+                  href="tel:+923335093223"
                   className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-0.5"
                 >
                   <Phone className="w-5 h-5" /> Request Quote
                 </a>
-                <Link
-                  href="/contact"
+                <a
+                  href={`https://wa.me/923335093223?text=${encodeURIComponent(`Hi, I'm interested in ${product.title} and want to know more about it.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold px-8 py-4 rounded-xl transition-all"
                 >
                   Message Us
-                </Link>
+                </a>
               </div>
             </div>
           </div>

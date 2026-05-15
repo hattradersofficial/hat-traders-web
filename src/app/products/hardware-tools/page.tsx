@@ -66,6 +66,7 @@ export default function HardwareToolsPage() {
       products={products}
       image="/tools/PT_SMT-6326_RotaryHammerDrill_600x600.webp"
       color="from-blue-50 to-blue-100 text-blue-900"
+      backgroundImage="https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=1920&q=80&auto=format&fit=crop"
     />
   );
 }

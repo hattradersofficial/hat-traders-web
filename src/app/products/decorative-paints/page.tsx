@@ -15,14 +15,14 @@ const products = [
     description:
       "Gobis offers a wide range of high-coverage, durable paints perfect for interior and exterior walls, delivering vibrant and long-lasting finishes.",
     badge: "Popular",
-    image: "https://gobispaints.com/wp-content/uploads/2021/04/Plastic-Emulsion-Gobis.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW4SjZ8pXCwuVCJXaJv7HW12j4BZ_TMnnH7Q&s",
   },
   {
     name: "Sparco Paints",
     href: "/products/decorative-paints/sparco-paints",
     description:
       "Sparco Paints are formulated for superior adhesion and coverage, providing beautiful, smooth finishes for residential and commercial applications.",
-    image: "https://sparcopaints.com/wp-content/uploads/2021/01/Luxury-Plastic-Emulsion-300x300.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0_eSY5gH9rWyglY8n_T89PUSx65FnowM3mw&s",
   },
   {
     name: "Nippon Paints",
@@ -30,7 +30,7 @@ const products = [
     description:
       "Nippon Paint – Asia's leading paint brand – brings world-class quality, weather resistance and an extensive colour palette to your walls.",
     badge: "Best Seller",
-    image: "https://alwaqaspaint.com/odourless-aircare.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D0BAQGxnRqxvRIOHA/company-logo_200_200/company-logo_200_200/0/1690881965820?e=2147483647&v=beta&t=32dxzzRy8J32dfiiO1ZkImEFz5oBbe1mZ81IHDasrfk",
   },
   {
     name: "ICI Dulux Paints",
@@ -38,21 +38,21 @@ const products = [
     description:
       "ICI Dulux is synonymous with premium quality. From washable emulsions to weathershield, Dulux paints stand the test of time and climate.",
     badge: "Premium",
-    image: "https://www.dulux.com.pk/content/dam/akzonobel-search/dulux/pk/en/products/dulux-better-living-air-clean-bio-based/Dulux-Better-Living-Air-Clean-Bio-based.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Qh7h37x9u-nyKSAY7fgylmOb8N6HkqAQjQ&s",
   },
   {
     name: "Glorex Paints",
     href: "/products/decorative-paints/glorex-paints",
     description:
       "Glorex Paints provide excellent coverage and stunning colour depth, ideal for adding character and style to any living space.",
-    image: "https://alwaqaspaint.com/Group-12966.png",
+    image: "https://ideahobby.eu/userfiles/productthumbs/thumb_61176.jpg",
   },
   {
     name: "Spray Paints",
     href: "/products/decorative-paints/spray-paints",
     description:
       "Professional aerosol spray paints for automotive, industrial and decorative applications, available in a wide range of finishes and colours.",
-    image: "https://alwaqaspaint.com/Paint-Spray-Bottles.png",
+    image: "/tools/Paint-Spray-Bottles.png",
   },
   {
     name: "Bluebird Arts",
@@ -68,13 +68,14 @@ export default function DecorativePaintsPage() {
   return (
     <ProductCategoryPage
       title="Decorative Paints"
-      subtitle="Premium Paint Brands"
+      subtitle="The World's Best Paint Brands"
       description="Discover our extensive range of decorative paints from the world's most trusted brands. Whether you need interior emulsions, exterior weathershields or specialty finishes, Hat Traders has you covered."
       breadcrumb="Decorative Paints"
       breadcrumbHref="/products/decorative-paints"
       products={products}
-      image="https://alwaqaspaint.com/odourless-aircare.png"
+      image="/Odourless-Air-Care.png"
       color="from-orange-50 to-orange-100 text-orange-900"
+      backgroundImage="https://img.magnific.com/free-vector/vibrant-colorful-dynamic-modern-fluid-wave-background_1017-39229.jpg"
     />
   );
 }
