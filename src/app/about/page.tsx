@@ -124,10 +124,11 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="h-64 bg-gray-50 rounded-3xl relative overflow-hidden group border border-gray-100">
                     <Image
-                      src="/Odourless-Air-Care.png"
+                      src="https://nipponpaint.com.pk/wp-content/uploads/2022/01/Odourless-Air-Care.png"
                       alt="Paints"
                       fill
                       className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
+                      unoptimized
                     />
                   </div>
                   <div className="h-44 bg-gray-50 rounded-3xl relative overflow-hidden group border border-gray-100">

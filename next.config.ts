@@ -62,6 +62,46 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "media.fortuneindia.com",
+      },
+      {
+        protocol: "https",
+        hostname: "nipponpaint.com.pk",
+      },
+      {
+        protocol: "https",
+        hostname: "faisalsanitary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "porta.pk",
+      },
+      {
+        protocol: "https",
+        hostname: "iysqidwpmfcierwdnxsp.supabase.co",
+      },
+      {
+        protocol: "https",
+        hostname: "supertuff.pk",
+      },
+      {
+        protocol: "https",
+        hostname: "fittings.com.pk",
+      },
+      {
+        protocol: "https",
+        hostname: "lamasatzim.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.smartmaterials.pk",
+      },
+      {
+        protocol: "https",
+        hostname: "d3genk2jhzijgn.cloudfront.net",
+      },
+      {
+        protocol: "https",
+        hostname: "i0.wp.com",
       }
     ],
   },

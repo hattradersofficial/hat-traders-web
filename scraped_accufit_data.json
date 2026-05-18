@@ -1,0 +1,129 @@
+[
+  {
+    "title": "JOINTING CEMENT",
+    "slug": "jointing-solution",
+    "description": "Accufit Joining Cement is a high-quality adhesive solution designed for leak-proof bonding of uPVC and PVC pipes and fittings. It offers fast setting time and strong adhesion, ensuring long-lasting performance in plumbing systems.",
+    "images": [
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/main/1774697119401-tg78wxfveu.jpg"
+    ],
+    "features": [
+      "About Us",
+      "Products",
+      "Projects",
+      "Certifications",
+      "ELECTRICAL DUCT AND FITTINGS",
+      "GARDEN PIPES",
+      "HDPE PIPES",
+      "JOINTING SOLUTION",
+      "PPRC PIPES AND FITTINGS",
+      "PVC ELECTRICAL CONDUIT PIPES",
+      "UPVC PIPES AND FITTINGS",
+      "WATER STORAGE TANKS"
+    ]
+  },
+  {
+    "title": "ELECTRICAL DUCT AND FITTINGS",
+    "slug": "electrical-ducts",
+    "description": "Accufit Telecom Ducts are HDPE silicon-coated pipes engineered for fast and smooth cable installation. They feature a low-friction inner layer for efficient blowing and pulling of fiber optic or communication cables. Offered in long lengths with minimal joints, they reduce installation cost and simplify future network upgrades.",
+    "images": [
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/main/1778937021919-s3ork6hkmi9.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752748089632-yk2kbk73f7.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752748089632-jnjochn5qi.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752748089632-urscta3g75.jpg"
+    ],
+    "features": [
+      "About Us",
+      "Products",
+      "Projects",
+      "Certifications",
+      "ELECTRICAL DUCT AND FITTINGS",
+      "GARDEN PIPES",
+      "HDPE PIPES",
+      "JOINTING SOLUTION",
+      "PPRC PIPES AND FITTINGS",
+      "PVC ELECTRICAL CONDUIT PIPES",
+      "UPVC PIPES AND FITTINGS",
+      "WATER STORAGE TANKS"
+    ]
+  },
+  {
+    "title": "GARDEN PIPES",
+    "slug": "garden-pipes",
+    "description": "Accufit Garden Pipes are made from high-quality PVC, suitable for domestic, industrial, and agricultural water applications. They are corrosion-free, rust-resistant, and chemical-proof, ensuring safe and clean water flow. The pipes come in opaque and strip variants, with attractive color options like red, yellow, blue, and transparent.",
+    "images": [
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/main/1774620390589-xsyf6mfqfp.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752747108219-tj3j98cb6js.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752747108220-tqw468k7z4o.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752747108220-bl53erkn2s4.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1774704227269-ga26ln5k2b.jpeg"
+    ],
+    "features": [
+      "About Us",
+      "Products",
+      "Projects",
+      "Certifications",
+      "ELECTRICAL DUCT AND FITTINGS",
+      "GARDEN PIPES",
+      "HDPE PIPES",
+      "JOINTING SOLUTION",
+      "PPRC PIPES AND FITTINGS",
+      "PVC ELECTRICAL CONDUIT PIPES",
+      "UPVC PIPES AND FITTINGS",
+      "WATER STORAGE TANKS"
+    ]
+  },
+  {
+    "title": "PPRC PIPES AND FITTINGS",
+    "slug": "pprc-pipes-and-fittings",
+    "description": "Accufit PPRC Pipes and Fittings are manufactured using high-grade polypropylene material in accordance with DIN 8077/78 standards. Ideal for both hot and cold water applications, these pipes are resistant to corrosion, chemicals, and high temperatures up to +95°C.They offer homogeneous welding connections, ensuring a leak-proof and durable system.",
+    "images": [
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/main/1774620434916-iuj02b107rf.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752748718454-9mhvmbjr0xu.JPG",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752748718455-l4jqm9l7pf.JPG",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752748718455-9gxfux0153w.JPG",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752748718455-7kuom0dh4bj.JPG",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/dimensions/1752748720078-banpw7djfwg.png"
+    ],
+    "features": [
+      "About Us",
+      "Products",
+      "Projects",
+      "Certifications",
+      "ELECTRICAL DUCT AND FITTINGS",
+      "GARDEN PIPES",
+      "HDPE PIPES",
+      "JOINTING SOLUTION",
+      "PPRC PIPES AND FITTINGS",
+      "PVC ELECTRICAL CONDUIT PIPES",
+      "UPVC PIPES AND FITTINGS",
+      "WATER STORAGE TANKS"
+    ]
+  },
+  {
+    "title": "UPVC PIPES AND FITTINGS",
+    "slug": "upvc-pipes-and-fittings",
+    "description": "Accufit uPVC Pipes and Fittings are engineered for sewerage, drainage, and water supply systems, offering high durability and performance. They are non-corrosive, UV-resistant, and flame retardant, making them ideal for both indoor and outdoor use. With smooth inner surfaces, they prevent bacterial growth and ensure efficient water flow. Available in a wide range of sizes and pressure ratings.",
+    "images": [
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/main/1774620518663-djqu5lcq3ep.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752675711363-m7xhkdmbpb.JPG",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752675711363-e2bpeyw22x5.JPG",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752675711363-ewtfsld6f8.JPG",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752675711363-jnja4noolha.jpg",
+      "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/dimensions/1752675714143-cmixuizl277.png"
+    ],
+    "features": [
+      "About Us",
+      "Products",
+      "Projects",
+      "Certifications",
+      "ELECTRICAL DUCT AND FITTINGS",
+      "GARDEN PIPES",
+      "HDPE PIPES",
+      "JOINTING SOLUTION",
+      "PPRC PIPES AND FITTINGS",
+      "PVC ELECTRICAL CONDUIT PIPES",
+      "UPVC PIPES AND FITTINGS",
+      "WATER STORAGE TANKS"
+    ]
+  }
+]

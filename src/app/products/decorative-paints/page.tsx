@@ -73,7 +73,7 @@ export default function DecorativePaintsPage() {
       breadcrumb="Decorative Paints"
       breadcrumbHref="/products/decorative-paints"
       products={products}
-      image="/Odourless-Air-Care.png"
+      image="https://nipponpaint.com.pk/wp-content/uploads/2022/01/Odourless-Air-Care.png"
       color="from-orange-50 to-orange-100 text-orange-900"
       backgroundImage="https://img.magnific.com/free-vector/vibrant-colorful-dynamic-modern-fluid-wave-background_1017-39229.jpg"
     />

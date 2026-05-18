@@ -135,7 +135,21 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-          <p>© {new Date().getFullYear()} Hat Traders. All rights reserved.</p>
+          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+            <p>© 2026 Hat Traders. All rights reserved.</p>
+            <span className="hidden sm:inline text-gray-700">|</span>
+            <p>
+              designed by{" "}
+              <a
+                href="https://sharplogicians.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-500 hover:text-orange-400 transition-colors font-medium"
+              >
+                Sharplogicians
+              </a>
+            </p>
+          </div>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-orange-400 transition-colors">
               Privacy Policy

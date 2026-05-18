@@ -1,42 +1,49 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, Phone, ArrowRight } from "lucide-react";
+import { portaProducts } from "@/lib/data/portaProducts";
+import { faisalProducts } from "@/lib/data/faisalProducts";
+import { accufitProducts } from "@/lib/data/accufitProducts";
+import { waterTanks } from "@/lib/data/waterTanks";
+import { sunnyProducts } from "@/lib/data/sunnyProducts";
 
-const sanitaryData: Record<string, { name: string; title: string; description: string; longDescription: string; products: string[] }> = {
+type ProductItem = string | { title: string; image: string; shortDesc?: string; longDesc?: string; slug?: string; productDetailPage?: string };
+
+const sanitaryData: Record<string, { name: string; title: string; description: string; longDescription: string; products: ProductItem[] }> = {
   faisal: {
     name: "Faisal Sanitary",
     title: "Faisal Sanitary Ware – Premium Bathroom Fixtures at Hat Traders",
     description: "Shop Faisal sanitary ware at Hat Traders. Modern bathroom fixtures combining elegance with durability at best prices in Pakistan.",
     longDescription: "Faisal offers a comprehensive line of sanitary ware designed for modern bathrooms. Their products combine elegant design with high-durability vitreous china for long-lasting performance.",
-    products: ["Faisal Water Closets (WC)", "Faisal Pedestal Wash Basins", "Faisal Counter-Top Basins", "Faisal Bidets", "Faisal Bathroom Accessories", "Faisal Cisterns"],
+    products: faisalProducts,
   },
   porta: {
     name: "Porta Sanitary",
     title: "Porta Sanitary Ware – Stylish Bathroom Solutions at Hat Traders",
     description: "Buy Porta sanitary ware at Hat Traders. Premium vitreous china bathroom fixtures for style and longevity.",
     longDescription: "Porta's range of bathroom fixtures and fittings are crafted from premium vitreous china with contemporary designs that suit any modern or traditional bathroom setting.",
-    products: ["Porta One-Piece WC", "Porta Two-Piece WC", "Porta Wall-Hung Basins", "Porta Vanity Units", "Porta Shower Trays", "Porta Bathroom Sets"],
+    products: portaProducts,
   },
   sunny: {
     name: "Sunny Sanitary",
     title: "Sunny Sanitary Ware – Affordable Quality at Hat Traders",
     description: "Sunny sanitary ware at Hat Traders. Affordable, quality bathroom fixtures for residential and commercial projects in Pakistan.",
     longDescription: "Sunny sanitary products bring affordable quality to residential and commercial projects. Reliable, durable and stylish – ideal for large-scale construction and budget-conscious projects.",
-    products: ["Sunny EWC", "Sunny Wash Basins", "Sunny Squat Pans", "Sunny Water Tanks", "Sunny Bathroom Accessories", "Sunny Urinals"],
+    products: sunnyProducts,
   },
   accufit: {
     name: "Accufit Sanitary",
     title: "Accufit Sanitary – Water-Efficient Modern Fixtures at Hat Traders",
     description: "Accufit sanitary ware at Hat Traders. Precision-engineered, water-efficient bathroom solutions with contemporary design.",
     longDescription: "Accufit delivers precision-engineered sanitary solutions with a focus on water efficiency and modern design. Their dual-flush systems and water-saving technology make them ideal for eco-conscious projects.",
-    products: ["Accufit Dual-Flush WC", "Accufit Wall-Mounted Basins", "Accufit Shower Enclosures", "Accufit Taps & Mixers", "Accufit Flush Valves", "Accufit Smart Cisterns"],
+    products: accufitProducts,
   },
   "water-tanks": {
     name: "Water Tanks",
     title: "Water Tanks – Overhead & Underground Storage Tanks at Hat Traders",
     description: "Buy water storage tanks at Hat Traders. UV-resistant overhead and underground tanks in all capacities for Pakistan's climate.",
     longDescription: "Our water tank range includes overhead plastic tanks and underground storage solutions in capacities from 200 to 5000 litres. UV-stabilised, food-grade material rated for Pakistan's extreme temperatures.",
-    products: ["200 Litre Overhead Tank", "500 Litre Overhead Tank", "1000 Litre Overhead Tank", "2000 Litre Overhead Tank", "Underground Water Tank", "Industrial Storage Tanks"],
+    products: waterTanks,
   },
 };
 
@@ -86,14 +93,39 @@ export default async function SanitarySlugPage({ params }: { params: Promise<Par
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-black text-gray-900 mb-8">Available Products</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {item.products.map((product, i) => (
-              <div key={product} className="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="w-10 h-10 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center text-lg font-black mb-3">{i + 1}</div>
-                <h3 className="font-bold text-gray-900 mb-1">{product}</h3>
-                <p className="text-sm text-gray-500">Available at Hat Traders – best price guaranteed.</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {item.products.map((product, i) => {
+              if (typeof product === 'string') {
+                return (
+                  <div key={product} className="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+                    <div className="w-10 h-10 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center text-lg font-black mb-3">{i + 1}</div>
+                    <h3 className="font-bold text-gray-900 mb-1">{product}</h3>
+                    <p className="text-sm text-gray-500">Available at Hat Traders – best price guaranteed.</p>
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={product.slug || product.title} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all flex flex-col group">
+                    <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden flex-shrink-0">
+                      {product.image ? (
+                        <img src={product.image} alt={product.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-gray-400">No Image</div>
+                      )}
+                    </div>
+                    <div className="p-5 flex flex-col flex-grow">
+                      <h3 className="font-bold text-gray-900 mb-2 line-clamp-1">{product.title}</h3>
+                      <p className="text-sm text-gray-600 mb-4 line-clamp-2 flex-grow">{product.shortDesc || product.longDesc || "Premium quality sanitary product."}</p>
+                      {product.productDetailPage && (
+                         <Link href={product.productDetailPage.startsWith('http') ? product.productDetailPage : product.productDetailPage} target={product.productDetailPage.startsWith('http') ? "_blank" : undefined} rel={product.productDetailPage.startsWith('http') ? "noopener noreferrer" : undefined} className="text-teal-600 font-bold text-sm hover:text-teal-700 flex items-center gap-1 mt-auto transition-colors">
+                            View Details <ArrowRight className="w-4 h-4" />
+                         </Link>
+                      )}
+                    </div>
+                  </div>
+                );
+              }
+            })}
           </div>
           <div className="mt-12 bg-teal-50 border border-teal-100 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-black text-gray-900 mb-3">Need More Information?</h3>

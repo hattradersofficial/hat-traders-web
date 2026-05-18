@@ -2,7 +2,7 @@ export const nipponProducts = [
   {
     slug: "nippon-odourless-aircare",
     title: "Nippon Odour~Less AirCare",
-    image: "https://alwaqaspaint.com/odourless-aircare.png", 
+    image: "https://nipponpaint.com.pk/wp-content/uploads/2022/01/Odourless-Air-Care.png", 
     shortDesc: "Premium interior emulsion featuring Active Carbon Technology to purify indoor air.",
     longDesc: "Transform your home with Nippon Odour~Less AirCare, available at Hat Traders. This revolutionary interior paint uses advanced Active Carbon Technology to continuously absorb harmful formaldehyde from the air, creating a safer environment for your family. With near-zero VOCs and almost no odor during application, it is perfect for nurseries, hospitals, and bedrooms.",
     features: [

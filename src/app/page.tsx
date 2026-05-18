@@ -25,7 +25,7 @@ const categories = [
     href: "/products/decorative-paints",
     description:
       "Premium quality interior & exterior paints from top brands like Nippon, ICI Dulux, Gobis, Sparco and more.",
-    image: "/Odourless-Air-Care.png",
+    image: "https://nipponpaint.com.pk/wp-content/uploads/2022/01/Odourless-Air-Care.png",
     color: "from-orange-50 to-orange-100",
     border: "border-orange-200",
     brands: ["Gobis", "Nippon", "ICI Dulux", "Sparco"],

@@ -15,21 +15,21 @@ const products = [
     description:
       "Faisal offers a comprehensive line of sanitary ware designed for modern bathrooms – combining elegance with durability.",
     badge: "Popular",
-    image: "https://images.unsplash.com/photo-1620626011761-9963d7521476?w=600&q=80&auto=format&fit=crop",
+    image: "https://faisalsanitary.com/wp-content/uploads/2025/08/vanity-bowl-mixer-scorpion-chrome-gold-item-9000-600x600.png",
   },
   {
     name: "Porta Sanitary",
     href: "/products/sanitary/porta",
     description:
       "Porta's range of bathroom fixtures and fittings are crafted from premium vitreous china, offering style and longevity.",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80&auto=format&fit=crop",
+    image: "https://porta.pk/wp-content/uploads/2026/04/HD6N-800x520.jpg",
   },
   {
     name: "Sunny Sanitary",
     href: "/products/sanitary/sunny",
     description:
       "Sunny sanitary products bring affordable quality to residential and commercial projects across Pakistan.",
-    image: "https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=600&q=80&auto=format&fit=crop",
+    image: "https://fittings.com.pk/wp-content/uploads/2025/10/xsunny_toilet_leaf.webp.pagespeed.ic.uPP2-RxgsA.webp",
   },
   {
     name: "Accufit Sanitary",
@@ -37,7 +37,7 @@ const products = [
     description:
       "Accufit delivers precision-engineered sanitary solutions with a focus on water efficiency and contemporary design.",
     badge: "New",
-    image: "https://images.unsplash.com/photo-1507652313519-d4c9174996dd?w=600&q=80&auto=format&fit=crop",
+    image: "https://iysqidwpmfcierwdnxsp.supabase.co/storage/v1/object/public/product-images/sub/1752679369628-tso1uufpo6s.JPG",
   },
   {
     name: "Water Tanks",
@@ -45,7 +45,7 @@ const products = [
     description:
       "Durable overhead and underground water storage tanks in multiple capacities – UV-resistant and built for Pakistani climate.",
     badge: "Best Seller",
-    image: "https://images.unsplash.com/photo-1541698444083-023c97d3f4b6?w=600&q=80&auto=format&fit=crop",
+    image: "https://www.smartmaterials.pk/wp-content/uploads/2025/09/Master-Water-Tank-1.png",
   },
 ];
 
