@@ -81,35 +81,6 @@ export default function Footer() {
                 <span>Manzoor Plaza T Chowk, near wateem hospital Rawat Islamabad</span>
               </div>
             </div>
-            <div className="flex items-center gap-3 mt-6">
-              <a
-                href="https://facebook.com"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-gray-700 hover:bg-orange-500 flex items-center justify-center transition-colors"
-              >
-                <Share2 className="w-4 h-4" />
-              </a>
-              <a
-                href="https://instagram.com"
-                aria-label="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-gray-700 hover:bg-orange-500 flex items-center justify-center transition-colors"
-              >
-                <Globe className="w-4 h-4" />
-              </a>
-              <a
-                href="https://wa.me/923335093223"
-                aria-label="WhatsApp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-gray-700 hover:bg-orange-500 flex items-center justify-center transition-colors"
-              >
-                <MessageCircle className="w-4 h-4" />
-              </a>
-            </div>
           </div>
 
           {/* Links */}

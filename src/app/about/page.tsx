@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Users, Building2, Handshake, Target } from "lucide-react";
+import { ArrowRight, Users, Building2, Handshake, Target, MessageSquare } from "lucide-react";
 
 import PageHeader from "@/components/ui/PageHeader";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "20+", label: "Years in Business" },
+  { value: "100%", label: "Genuine Products" },
   { value: "5000+", label: "Happy Customers" },
   { value: "100+", label: "Brands Stocked" },
   { value: "50+", label: "Product Categories" },
@@ -195,6 +195,45 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Support Banner */}
+      <section className="pb-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 lg:p-12 text-white shadow-2xl relative overflow-hidden">
+            {/* Pattern Accent */}
+            <div className="absolute inset-0 bg-grid-white/[0.03] -z-10" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -z-10" />
+            
+            <div className="max-w-3xl">
+              <span className="text-[10px] font-black uppercase tracking-[0.3em] bg-white/20 text-white px-3 py-1 rounded-full inline-block mb-4">
+                FAST ESTIMATES
+              </span>
+              <h3 className="text-2xl lg:text-4xl font-black mb-4 leading-tight tracking-tight">
+                Need a Custom Quote or Bulk Estimate?
+              </h3>
+              <p className="text-orange-100 text-sm lg:text-base leading-relaxed mb-8">
+                Skip the waiting time! Send your list of requirements or architectural designs directly to us on WhatsApp, and our sales team will compile a customized, discounted quote for you within minutes.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://wa.me/923335093223?text=Hi%20Hat%20Traders,%20I%20need%20a%20price%20quote%20for%20a%20construction%20project."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white text-orange-600 hover:bg-orange-50 font-black px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg uppercase text-xs tracking-widest"
+                >
+                  <MessageSquare className="w-4 h-4" /> Start Quick Chat
+                </a>
+                <a
+                  href="tel:+923335093223"
+                  className="inline-flex items-center gap-2 bg-orange-400/30 hover:bg-orange-400/50 border border-white/30 font-black px-8 py-4 rounded-xl transition-all uppercase text-xs tracking-widest"
+                >
+                  Call Now
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
