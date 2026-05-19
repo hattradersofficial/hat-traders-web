@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hattraders.com"),
+  metadataBase: new URL("https://www.hattraders.com"),
   title: {
     default: "Hat Traders – Complete Construction Solutions",
     template: "%s | Hat Traders",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_PK",
-    url: "https://hattraders.com",
+    url: "https://www.hattraders.com",
     siteName: "Hat Traders",
     title: "Hat Traders – Complete Construction Solutions",
     description:
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://hattraders.com",
+    canonical: "https://www.hattraders.com",
   },
   icons: {
     icon: [
