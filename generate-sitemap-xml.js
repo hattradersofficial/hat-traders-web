@@ -17,7 +17,7 @@ function extractData(filePath) {
   return products;
 }
 
-const base = "https://hattraders.com";
+const base = "https://www.hattraders.com";
 const now = new Date().toISOString().split('T')[0];
 
 const urls = [

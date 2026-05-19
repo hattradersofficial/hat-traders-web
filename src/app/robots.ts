@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://hattraders.com/sitemap.xml",
-    host: "https://hattraders.com",
+    sitemap: "https://www.hattraders.com/sitemap.xml",
+    host: "https://www.hattraders.com",
   };
 }

@@ -14,7 +14,7 @@ import { waterTanks } from "@/lib/data/waterTanks";
 import { sunnyProducts } from "@/lib/data/sunnyProducts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://hattraders.com";
+  const base = "https://www.hattraders.com";
   const now = new Date();
 
   const staticPages = [
