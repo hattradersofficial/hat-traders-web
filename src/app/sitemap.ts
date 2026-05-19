@@ -7,6 +7,11 @@ import { sprayPaints } from "@/lib/data/sprayPaints";
 import { hardwareProducts } from "@/lib/data/hardwareProducts";
 import { accessoryProducts } from "@/lib/data/accessoryProducts";
 import { bluebirdProducts } from "@/lib/data/bluebirdProducts";
+import { accufitProducts } from "@/lib/data/accufitProducts";
+import { portaProducts } from "@/lib/data/portaProducts";
+import { faisalProducts } from "@/lib/data/faisalProducts";
+import { waterTanks } from "@/lib/data/waterTanks";
+import { sunnyProducts } from "@/lib/data/sunnyProducts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://hattraders.com";
@@ -47,6 +52,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...hardwareProducts.map((p) => ({ url: `${base}/products/hardware-tools/${p.category}/${p.slug}`, priority: 0.7 })),
     ...accessoryProducts.map((p) => ({ url: `${base}/products/paint-accessories/${p.category}/${p.slug}`, priority: 0.7 })),
     ...bluebirdProducts.map((p) => ({ url: `${base}/products/bluebird-arts/${p.slug}`, priority: 0.7 })),
+    ...accufitProducts.map((p) => ({ url: `${base}/products/sanitary/accufit/${p.slug}`, priority: 0.7 })),
+    ...portaProducts.map((p) => ({ url: `${base}/products/sanitary/porta/${p.slug}`, priority: 0.7 })),
+    ...faisalProducts.map((p) => ({ url: `${base}/products/sanitary/faisal/${p.slug}`, priority: 0.7 })),
+    ...waterTanks.map((p) => ({ url: `${base}/products/sanitary/water-tanks/${p.slug}`, priority: 0.7 })),
+    ...sunnyProducts.map((p) => ({ url: `${base}/products/sanitary/sunny/${p.slug}`, priority: 0.7 })),
   ].map((p) => ({ ...p, lastModified: now, changeFrequency: "monthly" as const }));
 
   return [...staticPages, ...dynamicPages];
