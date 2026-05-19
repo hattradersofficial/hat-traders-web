@@ -80,7 +80,6 @@ export default async function NipponProductDetailPage({
                   alt={product.title}
                   fill
                   className="object-contain p-8 drop-shadow-xl"
-                  unoptimized={true}
                   priority
                 />
               </div>

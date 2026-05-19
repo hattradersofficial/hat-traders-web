@@ -128,7 +128,6 @@ export default function AboutPage() {
                       alt="Paints"
                       fill
                       className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
-                      unoptimized
                     />
                   </div>
                   <div className="h-44 bg-gray-50 rounded-3xl relative overflow-hidden group border border-gray-100">
@@ -147,7 +146,6 @@ export default function AboutPage() {
                       alt="Art Supplies"
                       fill
                       className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
-                      unoptimized
                     />
                   </div>
                   <div className="h-64 bg-gray-50 rounded-3xl relative overflow-hidden group border border-gray-100">
@@ -156,7 +154,6 @@ export default function AboutPage() {
                       alt="Sanitary Ware"
                       fill
                       className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
-                      unoptimized
                     />
                   </div>
                 </div>

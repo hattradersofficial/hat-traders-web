@@ -52,8 +52,7 @@ export default function NipponPaintsPage() {
                     src={product.image}
                     alt={product.title}
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                    unoptimized={true} // Using unoptimized for external arbitrary URLs just in case
+                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" // Using for external arbitrary URLs just in case
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">

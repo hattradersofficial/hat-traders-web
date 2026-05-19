@@ -157,19 +157,17 @@ export default function HomePage() {
                 <div className="absolute top-4 right-4 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Image
                     src={cat.image}
-                    alt={cat.title}
+                    alt=""
                     fill
                     className="object-contain"
-                    unoptimized={cat.image.startsWith('http')}
                   />
                 </div>
                 <div className="relative w-16 h-16 mb-4 overflow-hidden rounded-xl bg-white/50 p-2 border border-white/50 group-hover:scale-110 transition-transform">
                    <Image
                     src={cat.image}
-                    alt={cat.title}
+                    alt=""
                     fill
                     className="object-contain p-1"
-                    unoptimized={cat.image.startsWith('http')}
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">

@@ -60,7 +60,6 @@ export default function ProductCategoryPage({
                       alt={product.name}
                       fill
                       className="object-contain"
-                      unoptimized={product.image.startsWith('http')}
                     />
                   </div>
                 )}

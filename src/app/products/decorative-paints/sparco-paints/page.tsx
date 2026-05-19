@@ -54,7 +54,6 @@ export default function SparcoPaintsPage() {
                       alt={product.title}
                       fill
                       className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                      unoptimized={true}
                     />
                   ) : (
                      <div className="text-gray-400 font-medium">No Image</div>

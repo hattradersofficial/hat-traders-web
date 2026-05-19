@@ -59,7 +59,6 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                         alt={product.title}
                         fill
                         className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                        unoptimized={product.image.startsWith('http')}
                       />
                     ) : (
                       <div className="text-gray-400 font-medium text-xs">No Image</div>

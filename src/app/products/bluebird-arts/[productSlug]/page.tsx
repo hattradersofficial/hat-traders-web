@@ -81,7 +81,6 @@ export default async function BluebirdProductDetailPage({
                     alt={product.title}
                     fill
                     className="object-contain p-8 drop-shadow-xl"
-                    unoptimized={true}
                     priority
                   />
                 ) : (

@@ -54,6 +54,7 @@ export default function WhatsAppWidget() {
         rel="noopener noreferrer"
         className="pointer-events-auto relative group flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 animate-float cursor-pointer"
         title="Chat on WhatsApp"
+        aria-label="Chat on WhatsApp"
       >
         {/* Pulsing Outer Rings */}
         <div className="absolute inset-0 rounded-full bg-emerald-500 animate-pulse-ring -z-10" />

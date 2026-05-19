@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
@@ -79,12 +80,13 @@ export default function HeroSection() {
           className="absolute inset-0 transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0, zIndex: 0 }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={s.image}
             alt={s.badge}
-            className="w-full h-full object-cover object-center"
-            loading={i === 0 ? "eager" : "lazy"}
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority={i === 0}
           />
           {/* Dark overlay gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
