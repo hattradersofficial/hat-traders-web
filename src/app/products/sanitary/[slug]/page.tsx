@@ -64,17 +64,25 @@ export function generateStaticParams() {
   return Object.keys(sanitaryData).map((slug) => ({ slug }));
 }
 
-export default async function SanitarySlugPage({ params }: { params: Promise<Params> }) {
+export default async function SanitarySlugPage({ params, searchParams }: { params: Promise<Params>; searchParams: { page?: string } }) {
   const { slug } = await params;
   const item = sanitaryData[slug];
   if (!item) {
-    return (
-      <div className="container mx-auto px-4 py-32 text-center">
-        <h1 className="text-4xl font-black text-gray-900 mb-4">Not Found</h1>
-        <Link href="/products/sanitary" className="text-orange-500 hover:underline font-semibold">← Back to Sanitary</Link>
-      </div>
-    );
-  }
+  return (
+    <div className="container mx-auto px-4 py-32 text-center">
+      <h1 className="text-4xl font-black text-gray-900 mb-4">Not Found</h1>
+      <Link href="/products/sanitary" className="text-orange-500 hover:underline font-semibold">← Back to Sanitary</Link>
+    </div>
+  );
+}
+  const sp = await searchParams;
+  const page = Number(sp?.page) || 1;
+
+
+
+  const perPage = 20;
+  const totalPages = Math.ceil(item.products.length / perPage);
+  const paginatedProducts = item.products.slice((page - 1) * perPage, page * perPage);
   return (
     <>
       <section className="bg-gradient-to-br from-teal-50 to-teal-100 text-teal-900 py-20">
@@ -94,7 +102,7 @@ export default async function SanitarySlugPage({ params }: { params: Promise<Par
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-black text-gray-900 mb-8">Available Products</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {item.products.map((product, i) => {
+                          {paginatedProducts.map((product, i) => {
               if (typeof product === 'string') {
                 return (
                   <div key={product} className="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
@@ -126,7 +134,19 @@ export default async function SanitarySlugPage({ params }: { params: Promise<Par
                 );
               }
             })}
-          </div>
+                      </div>
+            {/* Pagination Controls */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {Array.from({ length: totalPages }).map((_, idx) => (
+                <Link
+                  key={idx}
+                  href={`/products/sanitary/${slug}?page=${idx + 1}`}
+                  className={`px-3 py-1 rounded ${idx + 1 === page ? 'bg-teal-600 text-white' : 'bg-gray-200 text-gray-800'} hover:bg-teal-500 hover:text-white`}
+                >
+                  {idx + 1}
+                </Link>
+              ))}
+            </div>
           <div className="mt-12 bg-teal-50 border border-teal-100 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-black text-gray-900 mb-3">Need More Information?</h3>
             <p className="text-gray-600 mb-6">Contact our sanitary experts for product specifications and pricing.</p>
