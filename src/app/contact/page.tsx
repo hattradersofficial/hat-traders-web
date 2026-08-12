@@ -14,7 +14,7 @@ export default function ContactPage() {
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone Support",
-      value: "+92 333 509 3223",
+      value: "+92 339 5566700",
       subText: "Call us directly for pricing & inquiries",
       href: "tel:+923335093223",
       actionText: "Call Now",
@@ -23,7 +23,7 @@ export default function ContactPage() {
     {
       icon: <MessageSquare className="w-6 h-6" />,
       label: "WhatsApp Chat",
-      value: "+92 333 509 3223",
+      value: "+92 339 5566700",
       subText: "Instant response for catalogs & support",
       href: "https://wa.me/923335093223?text=Hi%20Hat%20Traders,%20I%20have%20an%20inquiry%20regarding%20construction%20materials.",
       actionText: "Chat on WhatsApp",

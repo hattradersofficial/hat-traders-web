@@ -114,7 +114,7 @@ export default function Navbar() {
             <div className="flex flex-col">
               <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none">Call Us Now</span>
               <a href="tel:+923335093223" className="text-xs md:text-sm font-black text-gray-900 hover:text-orange-500 transition-colors tracking-tight mt-0.5">
-                +92 333 509 3223
+                +92 339 5566700
               </a>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function Navbar() {
               <a href="tel:+923335093223" className="flex items-center justify-between p-3 bg-orange-50 rounded-xl">
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-orange-500" />
-                  <span className="text-sm font-bold text-gray-900">+92 333 509 3223</span>
+                  <span className="text-sm font-bold text-gray-900">+92 339 5566700</span>
                 </div>
                 <span className="text-[10px] font-black text-orange-600 uppercase">Call Now</span>
               </a>

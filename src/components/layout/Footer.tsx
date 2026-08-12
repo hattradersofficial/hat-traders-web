@@ -67,7 +67,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-sm hover:text-orange-400 transition-colors"
               >
                 <Phone className="w-4 h-4 text-orange-500" />
-                +92 333 509 3223
+                +92 339 5566700
               </a>
               <a
                 href="mailto:hat.traders.official@gmail.com"
