@@ -16,7 +16,7 @@ export default function ContactPage() {
       label: "Phone Support",
       value: "+92 339 5566700",
       subText: "Call us directly for pricing & inquiries",
-      href: "tel:+923335093223",
+      href: "tel:++923395566700",
       actionText: "Call Now",
       gradient: "from-amber-500 to-orange-600"
     },
@@ -25,7 +25,7 @@ export default function ContactPage() {
       label: "WhatsApp Chat",
       value: "+92 339 5566700",
       subText: "Instant response for catalogs & support",
-      href: "https://wa.me/923335093223?text=Hi%20Hat%20Traders,%20I%20have%20an%20inquiry%20regarding%20construction%20materials.",
+      href: "https://wa.me/+923395566700?text=Hi%20Hat%20Traders,%20I%20have%20an%20inquiry%20regarding%20construction%20materials.",
       actionText: "Chat on WhatsApp",
       gradient: "from-green-500 to-emerald-600"
     },
@@ -183,7 +183,7 @@ export default function ContactPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://wa.me/923335093223?text=Hi%20Hat%20Traders,%20I%20need%20a%20price%20quote%20for%20a%20construction%20project."
+                  href="https://wa.me/+923395566700?text=Hi%20Hat%20Traders,%20I%20need%20a%20price%20quote%20for%20a%20construction%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-orange-600 hover:bg-orange-50 font-black px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg uppercase text-xs tracking-widest"
@@ -191,7 +191,7 @@ export default function ContactPage() {
                   <MessageSquare className="w-4 h-4" /> Start Quick Chat
                 </a>
                 <a
-                  href="tel:+923335093223"
+                  href="tel:++923395566700"
                   className="inline-flex items-center gap-2 bg-orange-400/30 hover:bg-orange-400/50 border border-white/30 font-black px-8 py-4 rounded-xl transition-all uppercase text-xs tracking-widest"
                 >
                   Call Now

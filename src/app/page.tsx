@@ -284,7 +284,7 @@ export default function HomePage() {
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:+923335093223"
+              href="tel:++923395566700"
               className="inline-flex items-center gap-2 bg-orange-400/30 hover:bg-orange-400/50 border border-white/30 font-bold px-8 py-3 rounded-lg transition-all"
             >
               <Phone className="w-4 h-4" /> Call Now

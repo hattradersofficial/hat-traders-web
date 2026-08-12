@@ -152,13 +152,13 @@ export default async function SanitarySlugPage({ params, searchParams }: { param
             <p className="text-gray-600 mb-6">Contact our sanitary experts for product specifications and pricing.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+923335093223"
+                href="tel:++923395566700"
                 className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2.5 rounded-lg transition-all"
               >
                 <Phone className="w-4 h-4" /> Request Quote
               </a>
               <a
-                href={`https://wa.me/923335093223?text=${encodeURIComponent(`Hi, I'm interested in ${item.name} products and want to know more about the range.`)}`}
+                href={`https://wa.me/+923395566700?text=${encodeURIComponent(`Hi, I'm interested in ${item.name} products and want to know more about the range.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-orange-300 text-orange-600 hover:bg-orange-100 font-bold px-6 py-2.5 rounded-lg transition-all"

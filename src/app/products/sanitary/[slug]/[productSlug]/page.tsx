@@ -124,13 +124,13 @@ export default async function ProductDetailPage({ params }: { params: Promise<Pa
 
               <div className="mt-auto pt-8 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:+923335093223"
+                  href="tel:++923395566700"
                   className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-teal-600/20 hover:-translate-y-0.5"
                 >
                   <Phone className="w-5 h-5" /> Request Quote
                 </a>
                 <a
-                  href={`https://wa.me/923335093223?text=${encodeURIComponent(`Hi, I'm interested in the ${product.title} (${slug.toUpperCase()}). Please provide pricing and availability.`)}`}
+                  href={`https://wa.me/+923395566700?text=${encodeURIComponent(`Hi, I'm interested in the ${product.title} (${slug.toUpperCase()}). Please provide pricing and availability.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5"

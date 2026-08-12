@@ -216,7 +216,7 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://wa.me/923335093223?text=Hi%20Hat%20Traders,%20I%20need%20a%20price%20quote%20for%20a%20construction%20project."
+                  href="https://wa.me/+923395566700?text=Hi%20Hat%20Traders,%20I%20need%20a%20price%20quote%20for%20a%20construction%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-orange-600 hover:bg-orange-50 font-black px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg uppercase text-xs tracking-widest"
@@ -224,7 +224,7 @@ export default function AboutPage() {
                   <MessageSquare className="w-4 h-4" /> Start Quick Chat
                 </a>
                 <a
-                  href="tel:+923335093223"
+                  href="tel:++923395566700"
                   className="inline-flex items-center gap-2 bg-orange-400/30 hover:bg-orange-400/50 border border-white/30 font-black px-8 py-4 rounded-xl transition-all uppercase text-xs tracking-widest"
                 >
                   Call Now

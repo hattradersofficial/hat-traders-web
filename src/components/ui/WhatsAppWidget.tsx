@@ -49,7 +49,7 @@ export default function WhatsAppWidget() {
 
       {/* Floating Animated WhatsApp Button */}
       <a
-        href="https://wa.me/923335093223?text=Hi,%20I%20want%20to%20know%20more%20about%20the%20products%20of%20Hat%20Traders."
+        href="https://wa.me/+923395566700?text=Hi,%20I%20want%20to%20know%20more%20about%20the%20products%20of%20Hat%20Traders."
         target="_blank"
         rel="noopener noreferrer"
         className="pointer-events-auto relative group flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 animate-float cursor-pointer"
